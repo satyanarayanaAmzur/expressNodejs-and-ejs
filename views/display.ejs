@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+<% include partials/menu %>
+
+<div class="container-fluid bg-3 text-center">    
+  <!-- <h3><%= page %></h3><br> -->
+  <div class="row">
+<!--  -->
+        <div class="list-group">
+                <!-- loop over blog posts and render them -->
+                <% posts.forEach((post) => { %>
+                  <!-- <a href="/post/<%= post.id %>" class="list-group-item"> -->
+                    <row>
+                            <h4 class="list-group-item-heading"><%= post.name %></h4>  <p class="list-group-item-text"><%= post.role %></p>  <p class="list-group-item-text"><%= post.contactNo %></p> <br/>
+                    </row>
+                  <!-- </a> -->
+                <% }) %>
+              </div>
+  </div>
+</div>
+
+</body>
+<% include partials/script %>
+</html>
